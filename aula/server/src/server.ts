@@ -11,7 +11,7 @@ async function bootstrap() {
         return {count: 220}
     })
 
-    await fastify.listen({ port:8082})
+    await fastify.listen({ port:8080})
     
 
 

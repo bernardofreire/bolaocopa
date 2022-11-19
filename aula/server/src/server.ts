@@ -1,4 +1,5 @@
 import Fastify from "fastify";
+import cors from '@fastify/cors'
 import { PrismaClient } from '@prisma/client'
 
 
@@ -11,6 +12,10 @@ async function bootstrap() {
 
     const fastify = Fastify({
         logger: true,
+    })
+
+    await fastify.register(cors, {
+        origin: true,
     })
 
 
